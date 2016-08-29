@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export PYTHONPATH=
+
+cd ~koglin/psana/current
+.  /reg/g/psdm/etc/ana_env.sh
+. /reg/g/psdm/bin/sit_setup.sh
+
+source ~koglin/src/xarrayenv/bin/activate
+
+#scons
+#cd ~koglin/psana/current/RunSummary/src
+
+args="$@"
+
+#ipython --pylab
+
+#ipython -i -c "%run ~koglin/psana/current/RunSummary/src/ixarray.py $args" --pylab
+ipython -i -c "%run ~koglin/psana/current/RunSummary/src/ixarray.py $args" --pylab
+
